@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Umut | Discord Geliştirici</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968756.png">
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a2e0f1f0d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Yükleme Ekranı -->
+  <div id="loading-screen">
+    <h1>Yükleniyor...</h1>
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Umut</div>
+    <button id="menuToggle" aria-label="Menüyü Aç/Kapat">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#hero">Ana Sayfa</a></li>
+      <li><a href="#hakkimda">Hakkımda</a></li>
+      <li><a href="#projeler">Projeler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+      <li><button id="themeToggle" aria-label="Tema Değiştir"><i class="fa-solid fa-moon"></i></button></li>
+    </ul>
+  </nav>
+
+  <!-- Giriş Bölümü -->
+  <section class="hero" id="hero">
+    <h1>Ben <span class="highlight">Umut</span></h1>
+    <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
+    <p>Discord botları geliştiriyorum & web tasarımıyla ilgileniyorum.</p>
+    <div class="discord-tag" id="copyBtn">
+      <i class="fa-brands fa-discord"></i> <span id="discordTag">umut#3131</span>
+    </div>
+  </section>
+
+  <!-- Hakkımda -->
+  <section class="hakkimda" id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p>Merhaba! Ben Umut. Yazılıma Discord botlarıyla başladım. Web tasarımıyla ilgileniyor, kullanıcı dostu projeler geliştiriyorum.</p>
+    <div class="skills-grid"></div>
+  </section>
+
+  <!-- Projeler -->
+  <section class="projeler" id="projeler">
+    <h2>Projelerim</h2>
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">Tümü</button>
+      <button class="filter-btn" data-filter="discord">Discord</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+    </div>
+    <div class="projects-grid"></div>
+  </section>
+
+  <!-- Proje Modal -->
+  <div class="modal" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="closeModal">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="carousel">
+        <div class="carousel-images"></div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      <a href="#" target="_blank" id="modalLink">Projeyi Gör</a>
+    </div>
+  </div>
+
+  <!-- İletişim -->
+  <section class="iletisim" id="iletisim">
+    <h2>İletişim</h2>
+    <form id="contactForm">
+      <input type="text" name="isim" placeholder="Adınız" required />
+      <span class="error-msg"></span>
+      <input type="email" name="email" placeholder="E-posta" required />
+      <span class="error-msg"></span>
+      <textarea name="mesaj" rows="5" placeholder="Mesajınız" required></textarea>
+      <span class="error-msg"></span>
+      <button type="submit">Gönder</button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <!-- Altbilgi -->
+  <footer>
+    <p>© 2025 Umut. Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
